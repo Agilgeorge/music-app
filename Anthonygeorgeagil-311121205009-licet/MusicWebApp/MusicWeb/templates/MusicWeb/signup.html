@@ -1,0 +1,37 @@
+{%extends 'MusicWeb/basic.html'%}
+{% block title%}Sign Up{% endblock %}
+
+{% block body %}
+<div class="container my-4">
+    <form method = "POST" action = "/MusicWeb/signup">{% csrf_token %}
+    <div class="form-group" style = "padding:2%;">
+        <label for = "exampleFormControlInput1">Email</label>
+        <input type = "email" class= "form-control" id = "exampleFormControlInput1" placeholder="name@example.com" name = "email">
+    </div>
+    <div class="form-group" style = "padding:2%;">
+        <label for = "exampleFormControlInput1">Username</label>
+        <input type = "text" class= "form-control" id = "exampleFormControlInput1" name = "username">
+    </div>
+    <div class="form-group" style = "padding:2%;">
+        <label for = "exampleFormControlInput1">First Name</label>
+        <input type = "text" class= "form-control" id = "exampleFormControlInput1" name = "firstname">
+    </div>
+    <div class="form-group" style = "padding:2%;">
+        <label for = "exampleFormControlInput1">Last Name</label>
+        <input type = "text" class= "form-control" id = "exampleFormControlInput1" name = "lastname">
+    </div>
+    <div class="form-group" style = "padding:2%;">
+        <label for = "exampleFormControlInput1">Password</label>
+        <input type = "password" class= "form-control" id = "exampleFormControlInput1" name = "pass1">
+    </div>
+    <div class="form-group" style = "padding:2%;">
+        <label for = "exampleFormControlInput1">Confirm Password</label>
+        <input type = "password" class= "form-control" id = "exampleFormControlInput1" name = "pass2">
+    </div>
+    <div style = "padding-top: 2%; padding-left: 45%;">
+        <button type = "submit" class = "btn btn-primary" >Sign Up</button>
+    </div>
+    </form>
+    
+</div>
+{% endblock %}

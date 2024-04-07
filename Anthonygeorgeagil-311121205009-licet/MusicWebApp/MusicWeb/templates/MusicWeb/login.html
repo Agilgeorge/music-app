@@ -1,0 +1,21 @@
+{%extends 'MusicWeb/basic.html'%}
+{% block title%}Login{% endblock %}
+
+{% block body %}
+<div class="container my-3">
+    <form method = "POST" action = "/MusicWeb/login">{% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Username</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "username">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name = "pass">
+        </div>
+        <div style = "padding-left: 45%;">
+        <button type="submit" class="btn btn-primary" >Login</button>
+        </div>
+        <p style = "padding-top: 2%; padding-left: 39%;">Don't have an account? <a href = "/MusicWeb/signup">Sign up.</a></p>
+      </form>
+    </div>
+{% endblock %}

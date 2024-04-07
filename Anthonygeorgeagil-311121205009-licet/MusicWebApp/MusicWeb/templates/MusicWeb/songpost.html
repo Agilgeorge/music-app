@@ -1,0 +1,24 @@
+{% extends 'MusicWeb/basic.html' %}
+{% block title %}All Songs {% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style = "padding-top: 3%;">
+            <img src = "/media/{{song.image}}" alt = ".." height = "85%" width = "85%">
+        </div>
+        <div class="col-md-6" style = "padding-top: 3%;">
+            <h2 style = "font-weight: 700; font-size: 4rem;"> {{song.name}}</h2> 
+            <h4 style = "padding-top: 2%; font-size: 2rem"> {{ song.singer }}</h4>
+            <h4 style = "padding-top: 2%; font-size: 2rem"> {{ song.genre }}</h4>
+            <audio controls style = "padding-top: 2%;">
+                <source src = "/media/{{song.song}}" type = "audio/mp3">
+            </audio>
+            <div style = "padding-top: 2%;">
+                <a href = "/media/{{song.song}}" download><button class = "btn btn-primary">Download</button></a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
